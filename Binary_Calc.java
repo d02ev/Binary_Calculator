@@ -14,7 +14,7 @@ public class Binary_Calc {
         // number input
         int decimalNumber = userInput.nextInt();
 
-        // storing first iteration int the array
+        // storing first iteration into the array
         code[0] = decimalNumber % 2;
 
         // storing decimalNumber into another variable n for manipulations
