@@ -7,9 +7,12 @@ public class Binary_Calc {
         // extra variables and arrays
         int n;
         int i = 1;
-        int[] code = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+        int[] code = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
         Scanner userInput = new Scanner(System.in);
+
+        // user prompt
+        System.out.print("Enter any number: ");
 
         // number input
         int decimalNumber = userInput.nextInt();
@@ -21,18 +24,24 @@ public class Binary_Calc {
         n = decimalNumber;
 
         // algorithm
-        while(n != 0) {
+        while (n != 0) {
 
             n /= 2;
             code[i] = n % 2;
             i++;
-        
-        }
-
-        for(int j = 9; j >= 0; j--) {
-
-            System.out.print("[" + code[j] + " ]");
 
         }
+
+        System.out.print("[");
+
+        for (int j = 9; j >= 0; j--) {
+
+            System.out.print(code[j] + " ");
+
+        }
+
+        System.out.print("]");
+
+        userInput.close();
     }
 }
